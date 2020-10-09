@@ -1,0 +1,69 @@
+#stage {
+  
+  border: 2px dashed grey;
+  width: 600px;
+  height: 600px;
+  opacity: 0.6;
+  margin: auto;
+  position: relative;
+}
+
+#hero {
+  border: 2px dashed red;
+  width: 73px;
+  height: 73px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: 5s moveRight 0s forwards, 2s moveDown 5s forwards,
+    0.5s moveLeftStop 7s forwards, 2.5s moveLeft 9.5s forwards,
+    5s moveBallDownRight 12s forwards;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(480px);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateX(480px);
+    
+  }
+  100% {
+    transform: translate(480px, 179px);
+  }
+}
+@keyframes moveLeftStop {
+  0% {
+    transform: translate(480px, 179px);
+  }
+  100% {
+    transform: translate(250px, 179px) rotate(45deg);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translate(250px, 179px) rotate(45deg);
+  }
+  100% {
+    transform: translate(-1px, 183px);
+    border: 2px dashed #0900bd;
+  }
+}
+@keyframes moveBallDownRight {
+  0% {
+    transform: translate(-10px, 179px);
+  }
+  100% {
+    transform: translate(424px, 422px);
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fad860 20%, #f9a742 55%, #f8842c 100%);
+  }
+}
